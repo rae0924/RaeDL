@@ -1,0 +1,73 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" text="text/css" href="{% static 'portfolio/particles.css' %}">
+    <link rel="stylesheet" text="text/css" href="{% static 'portfolio/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:regular,light|Yellowtail&display=swap"
+        rel="stylesheet">
+    {% block title%}
+    {% endblock title%}
+</head>
+
+<body>
+    <div id="particles-js"> </div>
+    <div class="nav-section">
+        <nav>
+            <ul>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Kaggle</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="info-section">
+        <div class="info-header">
+            <h1 id="info-name">Ragib Arnab</h1>
+            <h3 id="info-pseudonym">AKA rae384</h3>
+        </div>
+        <div class="info-box">
+            <div class="box about-me">
+                <div class="header about-me">
+                    <h3 class="title about-me">About Me</h3>
+                </div>
+                <div class="content about-me">
+                    <p class="content-text about-me">I am a high school student living in North Texas.</p>
+                </div>
+            </div>
+            <div class="box skills">
+                <div class="header skills">
+                    <h3 class="title skills">Skills</h3>
+                </div>
+                <div class="content skills">
+                    <p class="content-text skills">Interested in...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-section">
+        <div class="portfolio-header">
+            <h1 class="portfolio-title">Projects</h1> 
+        </div>
+        <div class="portfolio-box">{% block content %}{% endblock content %}
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', "{% static 'portfolio/particles.json' %}", function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+
+</html>

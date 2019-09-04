@@ -1,0 +1,71 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="article-container">
+    <h1 class="title">Setup</h1>
+    <p class="text">Set up your PC for operation. Install programs, dependencies, and packages for projects. If you cannot download
+        stuff from online (like in school) refer to the Anaconda or Kaggle section at the bottom of the page. One thing expected in these tutorials
+        is the ability to be resourceful, i.e., when confused just search it up because everything is online. 
+    </p>
+    <img src="{% static 'tutorials/images/setup/python_wallpaper.jpg' %}" alt="Error" class="article-image">
+    <p class="text"></p>
+    <h3 class="subtitle">Step 1: Install Python</h3>
+    <p class="text">The very first step is to install python on your PC. Install python 3 (preferably 3.6 or higher) from 
+        <a class="link" href="http://www.python.org">www.python.org</a>.
+        Make sure to specify the correct operating system. For example, if you have a 64-bit Windows machine, download one
+        that is specified for Windows and states that it is x86-64 (64 bit). For windows it is recommended to download the 
+        .exe file format. After that, run the executable file and a setup wizard will pull up on screen. Important: please check
+        off on the "Add Python 3.__ to PATH" so that pip works with the terminal. Follow the setup wizard until the installation
+        is completely finished. 
+    </p>
+    <img class="article-image" src="{% static 'tutorials/images/setup/setup_wizard.jpg' %}" alt="Error">
+    <h3 class="subtitle">Step 2 (Optional): Install a Text Editor</h3>
+    <p class="text">Python comes with its own standard code editor called "IDLE", which works fine with editing any .py scripts.
+        To start using IDLE, you can simply search up on your OS and it should come up as an application if you have python installed. To create files
+        just go under > "File" > "New File". However, if IDLE seems pretty basic, you can download a text editor from online. If you're
+        like me, who codes not just in python, you probably want a general text editor. I highly recommend getting 
+        <a class="link" href="https://code.visualstudio.com">Visual Studio Code</a>, 
+        <a class="link" href="https://atom.io">Atom</a>, or 
+        <a class="link" href="https://www.sublimetext.com">Sublime Text</a>.
+        These are the most popular text editors and are more customizable and user friendly than IDLE. Matter of choosing is wholly dependent
+        on personal preference. For example, I simply prefer VSCode because of its well organized GUI but I don't mind using Atom, either.
+        Remember that because these are general text editors, you have to allow python support from within the editors themselves to run
+        .py files, which should be easy as adjusting settings on your editor.
+    </p>
+    <h3 class="subtitle">Step 3: pip Install Packages </h3>
+    <p class="text">Now that python is installed, you can program whatever you want with python. However, to get extra functionality,
+        you would have to install packages, which will aid in developing more advanced programs. This is done through pip, which is 
+        python's default package manager. It can be accesed via the terminal (cmd, PowerShell, Terminal in MacOS, etc.) through the pip
+        command, if python is added to PATH. To install packages, simply enter the "pip install" command with the name of the package:
+    </p>
+    <pre>
+        <code class="python hljs">$ pip install package_name</code>
+    </pre>
+    <p class="text">Pip can install multiple packages at a time if they are listed with spaces between them. Now that you can install
+        packages here are some to install:</p>
+        <ul class="list">
+            <li>numpy</li>
+            <li>pandas</li>
+            <li>scipy</li>
+            <li>matplotlib</li>
+            <li>sklearn</li>
+            <li>opencv-python (cv2)</li>
+        </ul>
+    <p class="text">We will get into installing more technical packages such as PyTorch and Tensorflow later within
+        this tutorial series. </p>
+    <h3 class="subtitle">Anaconda</h3>
+    <p class="text">If you encounter problems with directly installing python and its dependencies, I suggest downloading the 
+        <a class="link" href="https://www.anaconda.com/distribution/">Anaconda Distribution</a>. Anaconda is a "data science platform"
+        that not only incorporates python, but other external programs such as conda, Jupyter notebook, Spyder, etc. which may be accessed
+        under an interactive GUI. This interface can be located by searching "Anaconda Navigator" after installing the distribution. Also
+        of significance, is the ability to edit your packages, under "Environments" within the navigator.
+    </p>
+    <img class="article-image" src="{% static 'tutorials/images/setup/anaconda_navigator.png' %}" alt="Error">
+    <h3 class="subtitle">Kaggle</h3>
+    <p class="text">If your school or workplace blocks everything else or nothing else seems to work, use
+        <a class="link" href="https://www.kaggle.com/distribution/">Kaggle.com</a> as a last resort. This website is a dedicated
+        data science and machine learning platform that boasts a wide community with a competitive scene. Within Kaggle,
+        you can run "kernels" where users can edit and execute python scripts or notebooks. 
+    </p>
+</div>
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="article-container">
+    <h1 class="title">Virtual Environments</h1>
+    <p class="text">Learn how to initialize and activate  virtualenvs. Venvs are important for ensuring 
+        that dependencies and their versions are sufficient for individual projects.</p>
+    <img class="article-image" src="{% static 'tutorials/images/venv/venv_art.PNG' %}" alt="Error">
+    <h3 class="subtitle">What are Virtual Environments?</h3>
+    <p class="text"> Virtual environments (I'll refer to them as "venvs" from now on), in the context of python, are localized
+        "environments" in which we execute code. Typically when we execute code, we run them in the global or base/root 
+        environment within our machines. The code executed on the global environment then relies on the packages, if any, installed globally.
+        You can see what packages are installed globally by simply typing in the terminal "pip list" and should print out something like the following: </p>
+    <pre>
+        <code class="python hljs">$ pip list
+
+Package    Version
+---------- -------
+pip        19.0.3
+setuptools 40.8.0</code>
+    </pre>
+    <p class="text">Hopefully it should list all the packages that you have installed globally, if not just hit "pip install" along with the
+        package name. Remember that globally installed packages are what you have installed normally, through simple "pip install" in the terminal.
+        The example above is from a clean install of python with no packages installed.
+    </p>
+    <h3 class="subtitle">Why use Venvs?</h3>
+    <p class="text">Whenever you work with a python project, you are probably going to require some use of packages or some dependencies.
+        But the problem arrises when you realize that the project requires a specific version of a package to function properly and the version
+        installed on the base environment does not match with what you need. Now the less smart way to solve this problem is by updating that package or uninstalling it
+        to install the required version. However, this may conflict with the requirements of other projects who may need that version you are replacing.
+        To circumvent all this hassle, you can initialize venvs. Venvs will initiate a clean environment in which you can install packages specific 
+        to the needs of that project. In short: venvs are environments specific to a project.
+    </p>
+    <h3 class="subtitle">How to Use Venvs</h3>
+    <p class="text">To use venvs, one must be quite comfortable in utilizing the terminal/command line. The first step is to open up the command prompt and
+        change directory (cd) into your project folder that requires a venv. After that, you must initialize the environment by typing in the prompt
+        "python -m venv venv_name" in where the "venv_name" is the alias of the venv's folder. Typically in a formal project you would leave the name as "venv" to
+        differentiate it easier like as follows: 
+    </p>
+    <pre>
+        <code class="python hljs">/project_directory$ python -m venv venv</code>
+    </pre>
+    <p class="text">This command will initialize the venv in a the project folder you are in ("project_directory" in the example). By using the "ls" or "dir" command,
+        you can see the venv as a directory. Note that venvs take up some storage, with a clean environment taking around 10 MBs, and will increase in size as you 
+        install more dependencies. Now to run scripts on this venv, we must activate it. In Windows Command Prompt or PowerShell we use the command:
+    </p>
+    <pre>
+        <code class="python hljs">/project_directory$ venv\Scripts\activate</code>
+    </pre>
+    <p class="text">In MacOS or Linux terminal we use this command: </p>
+    <pre>
+        <code class="python hljs">/project_directory$ source venv/bin/activate</code>
+    </pre>
+    <p class="text">That should now activate the venv within your command line. You can tell if it is activated since it will display the name of the environment 
+         on the command line off to the side within parenthese:
+    </p>
+    <pre>
+        <code class="python hljs">(venv) /project_directory$ </code>
+    </pre>
+    <p class="text">Now that the venv is activated, you should install packages that you will need for your packages freely in a clean environment without any
+        conflicting issues with the root environment. You can also just use the "deactivate" command to deactivate the venv:
+    </p>
+    <pre>
+        <code class="python hljs">(venv) /project_directory$ deactivate</code>
+    </pre>
+</div>
+{% endblock content %}

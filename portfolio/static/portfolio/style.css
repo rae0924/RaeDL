@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #ffffff;
+}
+.nav-section{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    position: fixed;
+}
+nav{
+    float: right;
+    
+}
+nav ul{
+    margin: 0 auto;
+    background-color: transparent;
+    padding-right: 100px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.info-section{
+    background: transparent; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.info-header{
+    background: transparent;
+    opacity: 0.9;
+    left: 25%;
+    right: 25%;
+    margin-top: 100px;
+}
+#info-name{
+    color: #ffffff;
+    font-family: 'Yellowtail', cursive;
+    font-size: 50pt;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px #a600ff;
+}
+#info-pseudonym{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-style: light;
+    font-weight: normal;
+    opacity: 0.5;
+    text-shadow: 2px 2px 4px #a600ff;
+}
+.info-box{
+    background:rgba(70, 0, 136, 0.5);
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 2.5%;
+}
+.box{
+    background:rgba(3, 0, 31, 0.5);
+    opacity: 1.0;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 195, 255, 0.5);
+}
+.box.about-me{
+    margin-bottom: 10px;
+}
+
+.title{
+    padding: 10px;
+    text-align: start;
+    right-padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.content-text{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+}
+
+.portfolio-section{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+.portfolio-header{
+    margin-top: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+.portfolio-title{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+.portfolio-box{
+    background:rgba(70, 0, 136, 0.5);
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.project{
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    background: transparent;
+}
+.project-title{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+.project-description{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    padding: 10px;
+}

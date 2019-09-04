@@ -1,0 +1,16 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+    <div class="tutorials">
+        <h1 class="tutorials-title">Tutorials</h1>
+    </div>
+    {% for tutorial in tutorials %}
+    <div class="content-block">
+        <a href="{% url tutorial.path_name %}">
+            <img class="display-image" src="{% static tutorial.img_name %}" alt="Display Image">
+            <h1 class="tutorial-title">{{tutorial.title}}</h1>
+            <p class="tutorial-description">{{tutorial.description}}</p>
+        </a>
+    </div>
+{% endfor %}
+{% endblock content %}
