@@ -1,0 +1,8 @@
+#particles-js{
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    background: rgb(27,0,48);
+    background: radial-gradient(circle, rgba(27,0,48,1) 0%, rgba(0,0,0,1) 100%);
+}
