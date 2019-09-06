@@ -12,3 +12,6 @@ def setup(request):
 
 def venv(request):
     return render(request, 'tutorials/venv.html')
+
+def machine_learning(request):
+    return render(request, 'tutorials/machine_learning.html')
