@@ -2,6 +2,33 @@
 {% load static %}
 {% block content %}
 <div class="article-container">
-    
+    <h1 class="title">Machine Learning 101</h1>
+    <p class="text">
+        Learn the core principles of machine learning, a field that has exploded in today's world. Understanding the various processes within
+        machine learning will allow us to conceive future projects and applications, ones that involve deep learning.
+    </p>
+    <img src="{% static 'tutorials/images/machine_learning_101/ai_ml_dl.png' %}" alt="Error" class="article-image">
+    <h3 class="subtitle">What Is up with Machine Learning?</h3>
+    <p class="text">I know that you guys have heard of "machine learning", a term that seems to float around the web in talks of AI. At first
+        it seems as if this term is perceived as almost revolutionary. Whenever you search this term up, there's these futuristic and idealistic 
+        appeals that suggest that machine learning allow robots to become almost human, with algorithms comparable to real human brains. 
+        But truthfully speaking, the media really exaggerates this fancy vocabulary. Here is what machine learning REALLY is: </p>
+    <ul class="list">
+        <li>A statistical/mathematical algorithm; simply its just advanced math manipulation.</li>
+        <li>A machine learning algorithm takes data and desired results and outputs a program, or a model, that can be reliably accurate.</li>
+        <li>The "AI" part comes from the fact that it can "learn".</li>
+        <li>"Learning" comes from its pre-programmed nature to be "trained" on existing data.</li>
+        <li>"Training" is the process of inputing data into an algorithm so that the model can adjust to it or "learn"</li>
+    </ul>
+    <img src="{% static 'tutorials/images/machine_learning_101/progvsml.png' %}" alt="Error" class="article-image">
+    <p class="text">Now this list may seem very unintuitive to you, so I believe an example should suffice. Remember back in your stats or physics class when
+        you used "regression" to get approximate equations for a scatter plot graph? Well, "regression" is a machine learning algorithm! You give the
+        regression algorithm a set of data and it will give you a "program" (hinting the pic above) or in this case an equation that you can use to approximate
+        for new x-values. This is <em>exactly</em> what machine learning is: using an algorithm that can adjust to data, like how regression tries to adjust to
+        given graphing data, to come up with a model that can reliably predict results, like how regression produces equations that can give out approximate
+        y-values for new x-values. 
+    </p>
+
+
 </div>
 {% endblock content %}
