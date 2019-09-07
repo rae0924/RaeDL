@@ -36,7 +36,7 @@
         <a class="link" href="https://scikit-learn.org/stable/">scikit-learn</a>, a general purpose machine learning library for python. Please do 
         not worry about not knowing coding yet, its all straightforward like in a calculator.
     </p>
-    <p>Before we can do regression, we got to import it in to actual use it, so we will import the LinearRegression functionality from scikit-learn,
+    <p class="text">Before we can do regression, we got to import it in to actual use it, so we will import the LinearRegression functionality from scikit-learn,
         as well as numpy to generate numbers to create data:
     </p>
     <pre>
@@ -49,18 +49,18 @@ import numpy as np</code>
         y = 2x + 5:
     </p>
     <pre>
-        <code class="python hljs">x = np.arange(50)  # a function to generate 50 integers, starting from 0
-y = 2*x + 5  # takes all values in the x array and multiplies it by 2 and adds 5</code>
+        <code class="python hljs">x = np.arange(50)  # generates 50 integers, starting from 0
+y = 2*x + 5  # applies to all values in x</code>
     </pre>
     <p class="text">After putting a table in the calculator, you would usually press the regression key and it will fit the table data into the
         regression algorithm and output an equation. In programming, you would create an instance of the regression algorithm and fit the table data 
         into it, and that algorithm will model itself after the equation:
     </p>
     <pre>
-        <code class="python hljs">model = LinearRegression()  # creating an instance of LinearRegression we imported earlier
+        <code class="python hljs">model = LinearRegression()  # instance of LinearRegression 
 x = x.reshape(-1,1)  # standard procedure for x-values in scikit-learn before fitting
-model.fit(x, y)  # this will fit it into the regression model like in a calculator 
-print(model.coef_, model.intercept_)  # will print out the m and the b in y = m*x + b
+model.fit(x, y)  # fit the regression model, like in a calculator 
+print(model.coef_, model.intercept_)  # print out the m and the b in y = m*x + b
 ... [2.] 5.0</code>
     </pre>
     <p class="text">Now that the model is fitted, it can predict values like a calculator could with the trained equation: </p>   
@@ -70,7 +70,7 @@ print(model.predict(x_test))  # the output should be 2 * (5) + 5 which is 15
 ... [15.]</code>
     </pre>
     <h3 class="subtitle">Conclusion</h3>
-    <p>The example above from surface level may seem complicated, but we know all this does is just a simple regression you would 
+    <p class="text">The example above from surface level may seem complicated, but we know all this does is just a simple regression you would 
         do in a calculator. You can see above that there is <em>zero</em> regard for the core algorithm—that is that there is no 
         mention of the inner mechanism of how regression model actually works. This concept is an important one, that we don't "reinvent the 
         wheel". We take existing algorithms like LinearRegression class in the example above and we fit data into it, and it adjusts
