@@ -26,9 +26,61 @@
         regression algorithm a set of data and it will give you a "program" (hinting the pic above) or in this case an equation that you can use to approximate
         for new x-values. This is <em>exactly</em> what machine learning is: using an algorithm that can adjust or "learn" from data, like how regression tries to adjust to
         given graphing data, to come up with a model that can reliably predict results, like how regression produces equations that can give out approximate
-        y-values for new x-values. 
+        y-values for new x-values. I will follow through with this example in code in the next section.
     </p>
-
-
+    <h3 class="subtitle">Regression Coding Example</h3>
+    <img src="{% static 'tutorials/images/machine_learning_101/scikit-learn-logo.png' %}" alt="Error" class="article-image">
+    <p class="text">Now that we know that regression is a machine learning algorithm, let's code regression as an intro example to programming 
+        machine learning in python. The process will be almost the same way as with a calculator, but with actual programming jargon. This will 
+        be done through the use of a package called
+        <a class="link" href="https://scikit-learn.org/stable/">scikit-learn</a>, a general purpose machine learning library for python. Please do 
+        not worry about not knowing coding yet, its all straightforward like in a calculator.
+    </p>
+    <p class="text">Before we can do regression, we got to import it in to actual use it, so we will import the LinearRegression functionality from scikit-learn,
+        as well as numpy to generate numbers to create data:
+    </p>
+    <pre>
+        <code class="python hljs">from sklearn.linear_model import LinearRegression
+import numpy as np</code>
+    </pre>
+    <p class="text">Please don't worry about the terminology, as it really does not matter at this point. Now it is time to plug in values.
+        In a calculator you would usually create a table of values, with two columns, one for x and the other for y. We will do the same thing,
+        but we will generate them in code through numpy. We will create two arrays (as in a column of data) for x and y, in this case for the equation 
+        y = 2x + 5:
+    </p>
+    <pre>
+        <code class="python hljs">x = np.arange(50)  # generates 50 integers, starting from 0
+y = 2*x + 5  # applies to all values in x</code>
+    </pre>
+    <p class="text">After putting a table in the calculator, you would usually press the regression key and it will fit the table data into the
+        regression algorithm and output an equation. In programming, you would create an instance of the regression algorithm and fit the table data 
+        into it, and that algorithm will model itself after the equation:
+    </p>
+    <pre>
+        <code class="python hljs">model = LinearRegression()  # instance of LinearRegression 
+x = x.reshape(-1,1)  # standard procedure for x-values in scikit-learn before fitting
+model.fit(x, y)  # fit the regression model, like in a calculator 
+print(model.coef_, model.intercept_)  # print out the m and the b in y = m*x + b
+... [2.] 5.0</code>
+    </pre>
+    <p class="text">Now that the model is fitted, it can predict values like a calculator could with the trained equation: </p>   
+    <pre>
+        <code class="python hljs">x_test = np.array(5).reshape(-1,1)  # a testing x-value of 5 to be plugged in
+print(model.predict(x_test))  # the output should be 2 * (5) + 5 which is 15
+... [15.]</code>
+    </pre>
+    <h3 class="subtitle">Conclusion</h3>
+    <p class="text">The example above from surface level may seem complicated, but we know all this does is just a simple regression you would 
+        do in a calculator. You can see above that there is <em>zero</em> regard for the core algorithm—that is that there is no 
+        mention of the inner mechanism of how regression model actually works. This concept is an important one, that we don't "reinvent the 
+        wheel". We take existing algorithms like LinearRegression class in the example above and we fit data into it, and it adjusts
+        itself, and it'll function just as well as the regression function in a calculator. The same case will be with almost all machine 
+        learning algorithms; we feed the data in and it will fit itself, and we won't have to touch the deep mathematics of the process. 
+        The main code really just focuses on the data. Later we will try to fine tune the models by updating its <em>hyperparameters</em>—
+        the settings we can change to make the model better—but that is also surface level and doesn't touch the core algorithm. Now there
+        are hundreds of different types of machine learning algorithms besides regression, and for that reason, we will not focus on simply
+        machine learning, but more on deep learning, which is a subset of machine learning that focuses on neural networks. Arguably, deep
+        learning is considered to be the "next big thing" and is very interesting.
+    </p>
 </div>
 {% endblock content %}
