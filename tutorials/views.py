@@ -7,11 +7,6 @@ def tutorials(request):
     context = {'tutorials': Tutorial.objects.all()}
     return render(request, 'tutorials/tutorials.html', context)
 
-def setup(request):
-    return render(request, 'tutorials/setup.html')
-
-def venv(request):
-    return render(request, 'tutorials/venv.html')
-
-def machine_learning(request):
-    return render(request, 'tutorials/machine_learning.html')
+def get_article(request, article):
+    url = 'tutorials/' + article + '.html'
+    return render(request, url)

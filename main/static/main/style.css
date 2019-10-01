@@ -13,7 +13,7 @@ body{
     margin: 0 auto;
     padding: 15px;
     background-color: transparent;
-}
+} 
 nav{
     float: right;
 }
@@ -160,6 +160,7 @@ nav ul li a{
     width: 200px;
     height: 150px;
     padding: 25px;
+    border-radius: 50px;
     position: relative;
     float: left;
 }
@@ -251,6 +252,7 @@ code{
 .header.scroll{
     background: rgba(12, 0, 56, 0.80);
     width: 47%;
+    height: 15%;
     min-width: 800px;
     left: 50%;
     transform: translate(-50%, 0);

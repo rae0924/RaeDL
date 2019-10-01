@@ -6,7 +6,7 @@
     </div>
     {% for tutorial in tutorials %}
     <div class="content-block">
-        <a href="{% url tutorial.path_name %}">
+        <a href="{% url 'article' article=tutorial.article_name %}">
             <img class="display-image" src="{% static tutorial.img_name %}" alt="Display Image">
             <h1 class="tutorial-title">{{tutorial.title}}</h1>
             <p class="tutorial-description">{{tutorial.description}}</p>

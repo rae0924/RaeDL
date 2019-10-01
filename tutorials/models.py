@@ -6,7 +6,7 @@ class Tutorial(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
-    path_name = models.CharField(max_length=100, default='raedl-home')
+    article_name = models.CharField(max_length=100, default='')
     img_name = models.TextField(default='x')
 
     def __str__(self):
