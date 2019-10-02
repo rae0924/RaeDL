@@ -7,6 +7,6 @@ def tutorials(request):
     context = {'tutorials': Tutorial.objects.all()}
     return render(request, 'tutorials/tutorials.html', context)
 
-def get_article(request, article):
-    url = 'tutorials/' + article + '.html'
+def get_tutorial(request, tutorial_article):
+    url = 'tutorials/' + tutorial_article + '.html'
     return render(request, url)

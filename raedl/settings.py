@@ -39,6 +39,7 @@ ALLOWED_HOSTS = ['www.raedl.com', 'raedl.com', '127.0.0.1', 'localhost']
 INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'tutorials.apps.TutorialsConfig',
+    'projects.apps.ProjectsConfig',
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',

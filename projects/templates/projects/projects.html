@@ -1,0 +1,16 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+    <div class="section">
+        <h1 class="section-title">Projects</h1>
+    </div>
+    {% for project in projects %}
+        <div class="content-block">
+            <a href="{% url 'project' project_article=project.article_name %}">
+                <img class="display-image" src="{% static project.img_name %}" alt="Display Image">
+                <h1 class="object-title">{{project.title}}</h1>
+                <p class="object-description">{{project.description}}</p>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock content %}
