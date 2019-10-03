@@ -4,10 +4,10 @@
     <div class="section">
         <h1 class="section-title">Tutorials</h1> 
     </div>
-    {% for tutorial in tutorials %}
+    {% for tutorial in tutorials %} 
         <div class="content-block">
             <a href="{% url 'tutorial-article' tutorial_article=tutorial.article_name %}">
-                <img class="display-image" src="{% static tutorial.mimg_name %}" alt="Display Image">
+                <img class="display-image" src="{% static tutorial.img_name %}" alt="Display Image">
                 <h1 class="object-title">{{tutorial.title}}</h1>
                 <p class="object-description">{{tutorial.description}}</p>
             </a>

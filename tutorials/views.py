@@ -3,7 +3,7 @@ from .models import Tutorial
 
 # Create your views here.
 
-def tutorials(request):
+def tutorials(request): 
     context = {'tutorials': Tutorial.objects.all()}
     return render(request, 'tutorials/tutorials.html', context)
 

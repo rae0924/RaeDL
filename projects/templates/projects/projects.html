@@ -6,7 +6,7 @@
     </div>
     {% for project in projects %}
         <div class="content-block">
-            <a href="{% url 'project' project_article=project.article_name %}">
+            <a href="{% url 'project-article' project_article=project.article_name %}">
                 <img class="display-image" src="{% static project.img_name %}" alt="Display Image">
                 <h1 class="object-title">{{project.title}}</h1>
                 <p class="object-description">{{project.description}}</p>

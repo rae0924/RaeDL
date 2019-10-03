@@ -252,7 +252,7 @@ code{
 .header.scroll{
     background: rgba(12, 0, 56, 0.80);
     width: 47%;
-    height: 15%;
+    height: 100px;
     min-width: 800px;
     left: 50%;
     transform: translate(-50%, 0);
