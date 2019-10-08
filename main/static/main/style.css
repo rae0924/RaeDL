@@ -229,8 +229,7 @@ code{
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 24pt;
-    padding: 50px;
-    padding-bottom: 25px;
+    padding: 35px 50px;
 }
 .link{
     text-decoration: underline;  
@@ -252,11 +251,34 @@ code{
 .header.scroll{
     background: rgba(12, 0, 56, 0.80);
     width: 47%;
-    height: 100px;
+    padding: 5px;
     min-width: 800px;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 50px;
     border: #ffffff;
     border-width: 5px;
+}
+.github{
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: #ffffff solid 3px;
+    border-radius: 50px;
+    border-left: none;
+    display: flex;
+}
+.github-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.github-text{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+    margin: auto;
+    margin-left: 5%;
+    display: inline-flex;
 }
