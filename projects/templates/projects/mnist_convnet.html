@@ -3,5 +3,35 @@
 {% block content %}
     <div class="article-container">
         <h1 class="title">MNIST ConvNet</h1>
+        <a href="https://github.com/rae0924/MNISTConvNet" class="github" target="_blank">
+            <img class="github-icon" src="{% static 'projects/images/github.png' %}" alt="error">
+            <h3 class="github-text">Repository</h3>
+        </a>
+        <h3 class="subtitle">Overview</h3>
+        <p class="text">MNIST is the classic dataset for beginners. I've noticed that most tutorials for deep
+            learning involves this specific dataset because it is so easy to process the data and the vast
+            portion of the problem is just architecting the network, which is very friendly towards beginners.
+            At the time when I made this repository, I was relatively new but wanted a greater challenge,
+            so I decided to incorporate convolutional neural networks. I thought that it would provide a good
+            intro to "computer vision", where the computer intelligently processes visual information and 
+            produces viable results. The Keras library made it a breeze to program, but I want to update
+            this project later with PyTorch.
+        </p>
+        <h3 class="subtitle">Algorithm</h3>
+        <p class="text">To be concise, convolutional networks are just regular neural networks but with
+            extra processing layers beforehand. The "convolution" part comes from the process of 
+            kernel convolution, in which a kernel or a filter maps over an image array, to produce a more
+            refined image, which makes it easier to extract features. This process of convolving goes
+            on for many layers, until the image reaches the fully connected layers (the regular network), where
+            it is reshaped if needed. The image at this point will be more simplified with easily distinguishable
+            features, at least in theory. How I generalize this is that the convolution makes it easier for 
+            the fully connected layers to interpret the images. Supposedly, this algorithm is much more accurate
+            than reguar networks, but takes far more computational power and time.
+        </p>
+        <h3 class="subtitle">Results</h3>
+        <p class="text">The outcome was expected, with much better results compared to regular networks. With 
+            99.60% accuracy on the training set and 98.79% accuracy for the testing set, it is darn impressive.
+            The model took a lot longer to train, which was also expected because of the extra processing.
+        </p>
     </div>
 {% endblock content %}

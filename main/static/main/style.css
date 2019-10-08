@@ -45,7 +45,6 @@ nav ul li a{
 }
 .header{
     width: 100%;
-    height: 10%;
     color: #ffffff;
     position: fixed;
     z-index: 1;
@@ -251,7 +250,7 @@ code{
 .header.scroll{
     background: rgba(12, 0, 56, 0.80);
     width: 47%;
-    padding: 5px;
+    padding: 0px;
     min-width: 800px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -266,10 +265,10 @@ code{
     margin-top: 25px;
     border: #ffffff solid 3px;
     border-radius: 50px;
-    border-left: none;
     display: flex;
 }
 .github-icon{
+    margin-left: -1px;
     height: 50px;
     width: 50px;
     border-radius: 50px;
