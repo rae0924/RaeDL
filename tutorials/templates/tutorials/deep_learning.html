@@ -3,6 +3,50 @@
 {% block content %}
 <div class="article-container">
     <h1 class="title">Intro to Deep Learning</h1>
-    <p class="text">Many consider the field of deep learning to be the "next big thing". Let's see why. </p>
+    <p class="text">Many consider the field of deep learning to be the "next big thing". Let's see why.</p>
+    <h3 class="subtitle">Deep Learning?</h3>
+    <p class="text">This term comes a lot in modern day discussions regarding tech. Simply put, it is the subfield
+        of machine learning that deals specifically with artificial neural networks. The "deep" part comes from
+        the fact that the networks have multiple varied layers. This field has the potential to be very powerful,
+        even though it practically is already. Its algorithmic structure allows it be very intelligent, meaning it has
+        the ability to do more advanced tasks than other traditional algorithms.
+    </p>
+    <h3 class="subtitle">How Do Neural Networks Work?</h3>
+    <p class="text">Now what I will say may in this section may sound superficial and unintuitive—and it is—so bare with me.
+        Neural networks in the core are complex algorithms, which is why it can do advanced stuff. But we don't need
+        to know how <em>exactly</em> it works, but rather how it works from the surface level and how we can use it. 
+        Otherwise I would have to teach you guys linear algebra and third year college calculus.
+    </p>
+    <p class="text">I would describe neural networks as this: function approximators. The main goal of a neural network is
+        like of a regression analysis, but now with multiple inputs and outputs. Neural networks usually are divided into
+        3 layers: input, hidden, and output. We will use the diagram below as an example. The input layer takes in values, 
+        perhaps each node or neuron taking in one pixel within an image, then transfers that input into the hidden layers.
+        These "hidden" layers take in the values and apply some kind of mathematical operation (usually sum of all inputs then mx + b). 
+        Honestly speaking, we do not care what goes within these hidden layers, because these computations are too complex to be 
+        intuitive. These hidden layers then transfers the transformed data to the output layers, which might represent if that image 
+        is a cat or a dog.
+    </p>
+    <img class="article-image" src="https://analyticsindiamag.com/wp-content/uploads/2018/12/nural-network-banner.gif" alt="Error">
+    <p class="text">So the neural network performs all these computations for each input (pixel in the example), for each layer, 
+        but what's the point? How does it find if that image is of a dog or a cat? Well, the answer is that it doesn't, at first.
+        It takes consecutive tries to "train" the algorithm to know if it a dog or a cat, it doesn't automatically get it. It
+        "learns" how to distinguish between the two through the process of <em>gradient descent</em> and <em>backpropogation</em>. 
+        The network takes each try and adjusts its mathematical operations in the layers to try to get less <em>error</em>. Ultimately,
+        the network wants to limit how wrong it is by gauging the error through what we call <em>loss/cost functions.</em> Using that
+        loss function, we compute what "step" we want to take to reduce the loss (error), through gradient descent. Don't worry about
+        understanding what gradient descent is, its just a way to direct to the minimum of a graph. This minimum would be where the error
+        would be minimal. Then we take that "step" or adjust our mathematical operations within the layers through backpropogation, which
+        is where the meat of the math is concentrated, which we won't need to know how it works. 
+    </p>
+    <img class="article-image" src="{% static 'tutorials/images/deep_learning/gradient_descent.png' %}" alt="Error" 
+    style="width: 450px; height: 270px; border-radius: 0;">
+    <h3 class="subtitle">...What?</h3>
+    <p class="text">Yeah, that's a lot to take in, innit? I wouldn't blame you if you weren't able to get it, after all,
+        it took me a whole week to understand the whole concept. I highly recommend checking out 
+        <a class="link" href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3Blue1Brown's videos</a>
+        on this topic, he explains it a lot better. Don't worry if you still don't get it, I am gonna post an example, which should surely
+        help, as it did for me. It will be on the MNIST dataset, the one used in the video. We will be making a neural network
+        that can recognize handwritten digits out of that dataset.
+    </p>
 </div>
 {% endblock content %}
