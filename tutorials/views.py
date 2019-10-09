@@ -3,15 +3,10 @@ from .models import Tutorial
 
 # Create your views here.
 
-def tutorials(request):
+def tutorials(request): 
     context = {'tutorials': Tutorial.objects.all()}
     return render(request, 'tutorials/tutorials.html', context)
 
-def setup(request):
-    return render(request, 'tutorials/setup.html')
-
-def venv(request):
-    return render(request, 'tutorials/venv.html')
-
-def machine_learning(request):
-    return render(request, 'tutorials/machine_learning.html')
+def get_tutorial(request, tutorial_article):
+    url = 'tutorials/' + tutorial_article + '.html'
+    return render(request, url)

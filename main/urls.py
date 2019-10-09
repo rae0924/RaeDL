@@ -6,4 +6,5 @@ urlpatterns = [
     path('about/', views.about, name='raedl-about'),
     path('tutorials/', include('tutorials.urls')),
     path('portfolio/', include('portfolio.urls')),
+    path('projects/', include('projects.urls'))
 ]

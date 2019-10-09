@@ -13,7 +13,7 @@ body{
     margin: 0 auto;
     padding: 15px;
     background-color: transparent;
-}
+} 
 nav{
     float: right;
 }
@@ -45,7 +45,6 @@ nav ul li a{
 }
 .header{
     width: 100%;
-    height: 10%;
     color: #ffffff;
     position: fixed;
     z-index: 1;
@@ -92,7 +91,7 @@ nav ul li a{
     font-size: 18pt;
     padding-top: 50px;
     text-align: center;
-    max-width: 600px;
+    max-width: 600px; 
     text-shadow: 1px 1px 1px #996100af;
 }
 .main-button{
@@ -132,19 +131,19 @@ nav ul li a{
     padding-top: 0%;
     line-height: 30px;
 }
-.tutorials{
+.section{
     margin: 0 auto;
     width: 15%;
     min-width: 250px;
     background: rgba(12, 0, 56, 0.80);
     border-radius: 25px;
 }
-.tutorials-title{
+.section-title{
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 35pt;
     padding: 25px;
-    text-align: center;
+    text-align: center; 
 }
 .content-block{
     margin: 0 auto;
@@ -160,6 +159,7 @@ nav ul li a{
     width: 200px;
     height: 150px;
     padding: 25px;
+    border-radius: 50px;
     position: relative;
     float: left;
 }
@@ -167,13 +167,13 @@ a {
   text-decoration: none;  
   width: 100%;
 }
-.tutorial-title{
+.object-title{
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     padding: 10px;
     padding-top: 20px;
 }
-.tutorial-description{
+.object-description{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     padding: 10px;
@@ -228,8 +228,7 @@ code{
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 24pt;
-    padding: 50px;
-    padding-bottom: 25px;
+    padding: 35px 50px;
 }
 .link{
     text-decoration: underline;  
@@ -251,10 +250,34 @@ code{
 .header.scroll{
     background: rgba(12, 0, 56, 0.80);
     width: 47%;
+    padding: 0px;
     min-width: 800px;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 50px;
     border: #ffffff;
     border-width: 5px;
+}
+.github{
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: #ffffff solid 3px;
+    border-radius: 50px;
+    display: flex;
+}
+.github-icon{
+    margin-left: -1px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.github-text{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+    margin: auto;
+    margin-left: 5%;
+    display: inline-flex;
 }

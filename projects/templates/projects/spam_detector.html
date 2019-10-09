@@ -1,0 +1,43 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="article-container">
+    <h1 class="title">SMS Spam Detector</h1>
+    <a href="https://github.com/rae0924/SpamDetector" class="github" target="_blank">
+            <img class="github-icon" src="{% static 'projects/images/github.png' %}" alt="error">
+            <h3 class="github-text">Repository</h3>
+    </a>
+    <h3 class="subtitle">Overview</h3>
+    <p class="text">This is one of my first short projects that successfully utilized a
+        neural network. To be more specific, I used a basic multi layer perceptron model
+        to detect spam messages, a "natural language processing" problem as one might dub.
+        The technical packages I used were Keras (Tensorflow) for the network and NLTK
+        (Natural Language Tool Kit) for word tokenizing and lematizing. I used Keras because
+        it makes sense for such a simple network, otherwise I would have used my favorite
+        which is PyTorch.
+    </p>
+    <h3 class="subtitle">Algorithm</h3>
+    <p class="text">
+        The algorithm is rather simple after thinking about it for a while.
+        The idea is that we make a lexicon, or a dictionary, of words to which we map the messages
+        to form a boolean array of words, with 1 denoting its existence in the message and 0 if it does
+        not so that it is interpretable by the model. Then we use a simple neural network that outputs if it 
+        is spam or not. To make a lexicon, we must first process the messages and get all the existing words. 
+        To do that we tokenize (separat words) and lemmatize (group variants of the same word) the messages, which
+        required NLTK. Obviously, we don't want to record all the existing words, because that will be waste
+        of RAM and processing power, so we limit which words go into the lexicon by their quantity over the 
+        whole dataset. After that we just fit the mapped data into a network and train it.
+    </p>
+    <h3 class="subtitle">Results</h3>
+    <p class="text">
+        Like I said before, this was fairly successful in detecting spam; the model was successful in that
+        it got 97%+ accuracy for most runs. Although that may seem like a high statistic, it may not
+        mean much if it got a fair amount of false positives, which I did not collect from the runs. It must
+        also be noted that about only 13% of the messages within the dataset were classified as "spam", which
+        can skew performance. Also there are possibly better models to use than a neural network,
+        which are more complex. One I saw in particular while researching was the "naive bayes" algorithm.
+    </p>
+
+
+</div>
+{% endblock content %}
